@@ -1,0 +1,49 @@
+#服务实例名称
+spring:
+  application:
+    name: va-manage-client
+  thymeleaf:
+    cache: true
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+#MQ 重试机制
+  rabbitmq: 
+    listener:
+      simple:
+        default-requeue-rejected: true
+        retry:
+          enabled: true
+          max-attempts: 2
+          initial-interval: 3000ms
+
+#服务端口
+server:
+  port: 9791
+  servlet:
+    context-path: /vmclient
+    session:
+      timeout: 1800
+
+#注册服务  
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8888/eureka
+  instance: 
+    ip-address: 127.0.0.1
+    prefer-ip-address: true
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 10
+    health-check-url: http://${eureka.instance.ip-address}:${server.port}${server.servlet.context-path}/actuator/health
+
+#日志输出
+logging:
+  level: 
+    root: info
+    com.jiuqi: info
+  # va日志输出模式，不配置则默认为 passive。
+  # active 主动推送到elasticsearch；passive 被动输出，再由logstash或者filebeat收集。 
+  va-mode: passive

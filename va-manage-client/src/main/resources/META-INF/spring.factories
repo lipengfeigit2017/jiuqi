@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.jiuqi.va.manage.client.config.VaManageClientConfig
