@@ -1,7 +1,7 @@
 #服务实例名称
 spring:
   application:
-    name: va-manage-client
+    name: manage-client
   thymeleaf:
     cache: true
   jackson:
@@ -20,9 +20,9 @@ spring:
 
 #服务端口
 server:
-  port: 9791
+  port: 9797
   servlet:
-    context-path: /vmclient
+    context-path: /client
     session:
       timeout: 1800
 

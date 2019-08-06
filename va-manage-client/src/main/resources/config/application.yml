@@ -25,12 +25,6 @@ spring:
     username: guest
     password: guest    
 
-  #日志检索
-  data:
-    elasticsearch:
-      cluster-name: docker-cluster
-      cluster-nodes: 10.2.3.170:9300
-
 #声明式客户端配置
 feign:
   httpclient:
@@ -49,21 +43,9 @@ feignClient:
   vmsShare:
     name: va-manage-server
     path: /vmserver
-  authMgr: 
-    name: ${spring.application.name}
-    path: ${server.servlet.context-path}
-  datamodelMgr:
-    name: ${spring.application.name}
-    path: ${server.servlet.context-path} 
   basedataMgr:
     name: ${spring.application.name}
     path: ${server.servlet.context-path} 
-  orgMgr:
-    name: ${spring.application.name}
-    path: ${server.servlet.context-path} 
-  contentMgr:
-    name: va-content-server
-    path: /vcserver
-  logMgr:
-    name: ${spring.application.name}
-    path: ${server.servlet.context-path}
+
+
+

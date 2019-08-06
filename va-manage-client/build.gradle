@@ -5,12 +5,12 @@ plugins {
 
 apply plugin: 'io.spring.dependency-management'
 
-group = 'com.jiuqi.va'
+group = 'com.jiuqi.lipengfei'
 version = '1.0.0'
 sourceCompatibility = '1.8'
 
 repositories {
-	maven { url "http://10.2.3.180:8081/repository/maven-public" }
+	//maven { url "http://10.2.3.180:8081/repository/maven-public" }
 	mavenCentral()
 }
 
@@ -27,23 +27,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'com.github.theborakompanioni:thymeleaf-extras-shiro:2.0.0'
 	
-	implementation "com.jiuqi.va:va-auth:${vaBootVersion}"
-	implementation "com.jiuqi.va:va-domain:${vaBootVersion}"
-	//implementation "com.jiuqi.va:va-basedata:${vaBootVersion}"
-	implementation "com.jiuqi.va:va-datamodel:${vaBootVersion}"
-	implementation "com.jiuqi.va:va-option:${vaBootVersion}"
-	implementation "com.jiuqi.va:va-organization:${vaBootVersion}"
-	implementation "com.jiuqi.va:va-schedule:${vaBootVersion}"
-	
-	//implementation project(':va-mapper')
-	//implementation project(':va-auth')
-	//implementation project(':va-domain')
-	implementation project(':va-basedata')
-	//implementation project(':va-datamodel')
-	//implementation project(':va-option')
-	//implementation project(':va-organization')
-	//implementation project(':va-log')
-	//implementation project(':va-schedule')
+
+	//implementation project(':va-basedata')
 	
 	runtimeOnly 'mysql:mysql-connector-java:5.1.45'
 	
