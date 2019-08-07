@@ -1,4 +1,4 @@
-package com.jiuqi.gmt.test;
+package com.jiuqi.gmc.test;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

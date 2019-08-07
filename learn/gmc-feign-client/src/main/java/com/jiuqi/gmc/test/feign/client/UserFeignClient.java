@@ -1,9 +1,9 @@
-package com.jiuqi.gmt.test.feign.client;
+package com.jiuqi.gmc.test.feign.client;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@FeignClient("gmc-service")
+@FeignClient(name = "${feignClient.gmc.name}", path = "${feignClient.gmc.path}")
 public interface UserFeignClient {
 
 	@GetMapping("/user/get")

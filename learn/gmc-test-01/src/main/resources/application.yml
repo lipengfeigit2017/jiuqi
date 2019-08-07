@@ -1,8 +1,10 @@
 
 server:
   port: 9999
-  
-  
+  servlet:
+    context-path: /gmcserver
+    session:
+      timeout: 1800
 
   #开放信息
 info:
