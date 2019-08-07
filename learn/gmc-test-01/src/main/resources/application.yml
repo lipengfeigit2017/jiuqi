@@ -3,3 +3,10 @@ server:
   port: 9797
   
   
+  
+  
+  #开放信息
+info:
+ app:
+   name: 提供用户查询服务
+   version: 1.0
