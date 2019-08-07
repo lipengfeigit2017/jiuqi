@@ -1,0 +1,35 @@
+plugins {
+	id 'java-library'
+}
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.jiuqi.gmc.test'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	maven { url "http://10.2.3.180:8081/repository/maven-public" }
+	mavenCentral()
+}
+
+dependencies {
+	api 'org.springframework.boot:spring-boot-starter-web:2.0.8.RELEASE'
+	api 'org.springframework.cloud:spring-cloud-starter-openfeign:2.0.2.RELEASE'
+}
+
+
+tasks.withType(JavaCompile) {  
+    options.encoding = "UTF-8"  
+}
+
+
+configurations.all {
+	resolutionStrategy {
+		// cache dynamic versions for 10 minutes
+		cacheDynamicVersionsFor 0, 'seconds'
+		// don't cache changing modules at all
+		cacheChangingModulesFor 0, 'seconds'
+	}
+}
