@@ -1,12 +1,22 @@
 
 server:
-  port: 9797
+  port: 9999
   
   
-  
-  
+
   #开放信息
 info:
  app:
    name: 提供用户查询服务
    version: 1.0
+   
+#Eureka配置信息
+spring:
+  application:
+    name: gmc-test-01
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9797/eureka
+  instance:
+    prefer-ip-address: true 
