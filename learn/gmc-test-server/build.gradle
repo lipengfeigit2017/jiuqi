@@ -40,6 +40,8 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 
 	implementation project (':gmc-feign-client')
+	implementation project (':gmc-test-controller')
+	
 }
 
 dependencyManagement {
