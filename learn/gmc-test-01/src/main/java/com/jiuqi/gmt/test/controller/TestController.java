@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
 	
-	@GetMapping("user/get")
+	@GetMapping("gmc/user/get")
 	public String getUser() {
 		
 		return "lipengfei";

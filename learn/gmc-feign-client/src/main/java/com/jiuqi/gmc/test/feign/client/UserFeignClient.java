@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @FeignClient(name = "${feignClient.gmc.name}", path = "${feignClient.gmc.path}")
 public interface UserFeignClient {
 
-	@GetMapping("/user/get")
+	@GetMapping("gmc/user/get")
 	public String getUser();
 }
