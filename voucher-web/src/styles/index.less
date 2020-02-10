@@ -1,0 +1,59 @@
+@import 'iconfont/iconfont.css';
+@import '~iview/src/styles/index.less';
+
+@primary-color: #03A4AD;
+@link-color: #03A4AD;
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.ivu-modal-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ivu-modal{
+        top: 0;
+    }
+}
+
+.va-bill-preview{
+    .ivu-input,.ivu-select-selected-value {
+        border: 0;
+        color: #222222;
+        font-weight:400;
+        font-size: 14px !important;
+        background-color: #F8F8F8;
+    }
+    .ivu-input-icon,.ivu-input-suffix,.ivu-select-arrow,.ivu-select-disabled .ivu-select-selection:hover .ivu-select-arrow{
+        display: none;
+    }
+    .ivu-input-icon-normal + .ivu-input {
+        padding-right: 7px;
+    }
+    .el-input--suffix .el-input__inner {
+        padding-right: 7px;
+    }
+    .ivu-date-picker-focused input{
+        box-shadow: 0 0;
+    }
+    .ivu-input[disabled]:hover,.ivu-select-disabled .ivu-select-selection{
+        border: 0;border: 0;
+        cursor: default;
+    }
+    .ivu-select-selection{
+        border: 0;
+    }
+
+    .ivu-input:hover{
+        border: 0;
+    }
+    .ivu-input:focus{
+        box-shadow: 0 0;
+    }
+}

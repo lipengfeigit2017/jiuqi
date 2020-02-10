@@ -1,0 +1,465 @@
+{
+	"name": "cfas",
+	"title": "云报账",
+	"template": {
+		"id": "235be808-5b86-be0a-6f97-cc02e8d54069",
+		"type": "v-board",
+		"kind": 0,
+		"width": 1000,
+		"layout": {
+			"type": "flex",
+			"flex-direction": "column"
+		},
+		"children": [
+			{
+				"id": "ecfca822-2c68-8b5a-7710-21c93639f2c3",
+				"type": "v-tool-bar",
+				"children": [
+					{
+						"id": "e52e054c-2c02-3f16-85e8-2bdef7dc8e7d",
+						"type": "v-tool-item",
+						"title": "新建",
+						"action": {
+							"type": "bill-add"
+						}
+					},
+					{
+						"id": "34397c12-ed97-3766-b60e-134902297ea4",
+						"type": "v-tool-item",
+						"title": "修改",
+						"action": {
+							"type": "bill-edit",
+							"model": [
+								"master.BILLCODE",
+								"master.VER"
+							]
+						}
+					},
+					{
+						"action": {
+							"type": "bill-save"
+						},
+						"id": "913047b2-81c2-3d78-04dd-17cbafdef3bd",
+						"type": "v-tool-item",
+						"title": "保存"
+					},
+					{
+						"id": "3e79a024-16b3-5358-4b09-141a63dc67b7",
+						"type": "v-tool-item",
+						"title": "提交",
+						"action": {
+							"type": "bill-commit",
+							"model": [
+								"master.BILLCODE",
+								"master.VER"
+							]
+						}
+					},
+					{
+						"id": "907efb94-dab4-e9d3-4545-241690a52614",
+						"type": "v-tool-item",
+						"title": "删除",
+						"action": {
+							"type": "bill-delete",
+							"model": [
+								"master.BILLCODE",
+								"master.VER"
+							]
+						}
+					},
+					{
+						"id": "180e4bbe-b267-9d43-087b-4ba8e5116c97",
+						"type": "v-tool-item",
+						"title": "流程查看",
+						"action": {
+							"type": "bill-workflow",
+							"model": [
+								"master.BILLCODE",
+								"master.VER"
+							]
+						}
+					}
+				]
+			},
+			{
+				"id": "4c711db1-f0e3-9b55-fbe5-d9be800c357b",
+				"type": "v-composite",
+				"layout": {
+					"type": "flex"
+				},
+				"children": [
+					{
+						"id": "dc0ac332-6456-e23d-f512-24dc942442ce",
+						"type": "v-composite",
+						"layoutData": {
+							"flex": "auto"
+						},
+						"layout": {
+							"type": "default",
+							"padding": 10
+						},
+						"children": [
+							{
+								"id": "13539464-0522-8624-f297-6d43ed3816f4",
+								"type": "v-panel",
+								"title": "基本信息",
+								"children": [
+									{
+										"id": "aaad5b24-57c1-3612-d81f-ac412822e05d",
+										"type": "v-composite",
+										"layout": {
+											"type": "auto",
+											"columns": {
+												"items": [
+													{
+														"width": 100,
+														"auto": false
+													},
+													{
+														"width": 80,
+														"auto": true
+													},
+													{
+														"width": 100,
+														"auto": false
+													},
+													{
+														"width": 80,
+														"auto": true
+													},
+													{
+														"width": 100,
+														"auto": false
+													},
+													{
+														"width": 80,
+														"auto": true
+													}
+												]
+											},
+											"rows": {
+												"count": 2
+											}
+										},
+										"children": [
+											{
+												"id": "599cc591-26f4-59f6-f3d9-cbe4a504d698",
+												"type": "v-label",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "BILLCODE"
+												},
+												"layoutData": {
+													"x": 0,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												}
+											},
+											{
+												"id": "f38f5753-26e4-fed1-fcca-6b2a80f1180b",
+												"type": "v-input",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "BILLCODE"
+												},
+												"layoutData": {
+													"x": 1,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												},
+												"inputType": "v-string"
+											},
+											{
+												"id": "eb079b05-8549-2418-3546-23add65be5e6",
+												"type": "v-label",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "CREATEUSER"
+												},
+												"layoutData": {
+													"x": 2,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												}
+											},
+											{
+												"id": "7d89a7fd-a45b-0f0c-d049-fb5c44b41fda",
+												"type": "v-input",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "CREATEUSER"
+												},
+												"layoutData": {
+													"x": 3,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												},
+												"inputType": "v-authuser"
+											},
+											{
+												"id": "348a808a-56df-99a1-0bfd-e96c77518e2a",
+												"type": "v-label",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "CREATETIME"
+												},
+												"layoutData": {
+													"x": 4,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												}
+											},
+											{
+												"id": "8908a237-aa57-01fe-c0fb-354dbc277eef",
+												"type": "v-input",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "CREATETIME"
+												},
+												"layoutData": {
+													"x": 5,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												},
+												"inputType": "v-datetime"
+											},
+											{
+												"id": "972cb1ff-0841-67b6-5037-f7c69014b7d1",
+												"type": "v-label",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "UNITCODE"
+												},
+												"layoutData": {
+													"x": 0,
+													"y": 1,
+													"w": 1,
+													"h": 1
+												}
+											},
+											{
+												"id": "ad4878a3-5af2-33d0-9c45-c994bed8194f",
+												"type": "v-input",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "UNITCODE"
+												},
+												"layoutData": {
+													"x": 1,
+													"y": 1,
+													"w": 1,
+													"h": 1
+												},
+												"inputType": "v-orgdata"
+											},
+											{
+												"id": "a03ec497-fd32-f2a3-7ccd-509523c319db",
+												"type": "v-label",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "BILLDATE"
+												},
+												"layoutData": {
+													"x": 2,
+													"y": 1,
+													"w": 1,
+													"h": 1
+												}
+											},
+											{
+												"id": "af797220-4678-a5be-2877-ae41e713e6cc",
+												"type": "v-input",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": "BILLDATE"
+												},
+												"layoutData": {
+													"x": 3,
+													"y": 1,
+													"w": 1,
+													"h": 1
+												},
+												"inputType": "v-date"
+											}
+										]
+									}
+								]
+							},
+							{
+								"id": "83d89024-9d6c-b344-d78c-b0f6530efaa2",
+								"type": "v-collapse",
+								"title": "查看附件",
+								"children": [
+									{
+										"id": "d5f4e886-9fd5-012a-ddaf-f2edb549907a",
+										"type": "v-collapse-header",
+										"layout": {
+											"type": "auto",
+											"columns": {
+												"items": [
+													{
+														"width": 1,
+														"auto": false
+													},
+													{
+														"width": 330,
+														"auto": false
+													}
+												]
+											},
+											"rows": {
+												"count": 1,
+												"height": 44
+											}
+										},
+										"children": [
+											{
+												"id": "aa1a1eb9-8f8a-efd9-be7a-e3d13dcf7d48",
+												"type": "v-upload",
+												"binding": {
+													"type": "field-simple",
+													"tableName": "",
+													"fieldName": ""
+												},
+												"layoutData": {
+													"x": 1,
+													"y": 0,
+													"w": 1,
+													"h": 1
+												}
+											}
+										]
+									},
+									{
+										"id": "ab3eb085-6406-8dea-912e-caaf35420e2c",
+										"type": "v-upload-list",
+										"binding": {
+											"type": "field-simple",
+											"tableName": "",
+											"fieldName": ""
+										},
+										"binding2": {
+											"type": "field-simple",
+											"tableName": "",
+											"fieldName": ""
+										}
+									}
+								]
+							},
+							{
+								"id": "3540b0fb-4a56-cf7f-8c59-9e97fb61d0db",
+								"type": "v-collapse",
+								"title": "单个子表",
+								"children": [
+									{
+										"id": "86689a16-881a-2ae8-2712-c93618373924",
+										"type": "v-grid",
+										"binding": {
+											"type": "table-simple",
+											"tableName": "",
+											"fields": [
+												{
+													"name": ""
+												}
+											]
+										}
+									}
+								]
+							},
+							{
+								"id": "c16b6403-710b-049c-9b37-3cf887aba0b7",
+								"type": "v-collapse",
+								"title": "多个子表",
+								"children": [
+									{
+										"id": "8f5c7652-c0b0-ba14-7447-6e2d3b3be597",
+										"type": "v-tabs",
+										"children": [
+											{
+												"id": "32de6f6e-672a-7261-c12b-daa85fb7199a",
+												"type": "v-tabs-item",
+												"title": "子表1",
+												"children": [
+													{
+														"id": "498df263-a3fc-6ad9-d5eb-43576ba7d3ed",
+														"type": "v-grid",
+														"binding": {
+															"type": "table-simple",
+															"tableName": "",
+															"fields": [
+																{
+																	"name": ""
+																}
+															]
+														}
+													}
+												]
+											},
+											{
+												"id": "83a456e1-b2cc-f62e-8e70-1d4618c038e9",
+												"type": "v-tabs-item",
+												"title": "子表2",
+												"children": [
+													{
+														"id": "d613ad86-bc2f-32f8-138c-11e7c79246d1",
+														"type": "v-grid",
+														"binding": {
+															"type": "table-simple",
+															"tableName": "",
+															"fields": [
+																{
+																	"name": ""
+																}
+															]
+														}
+													}
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					},
+					{
+						"id": "bff863ad-b757-a6ef-e3df-0f13c28efe42",
+						"type": "v-navigate",
+						"layoutData": {
+							"flex": "none"
+						},
+						"items": [
+							{
+								"id": "bff863ad-b757-a6ef-e3df-0f13c28efe43",
+								"title": "导航1"
+							},
+							{
+								"id": "bff863ad-b757-a6ef-e3df-0f13c28efe44",
+								"title": "导航2"
+							},
+							{
+								"id": "bff863ad-b757-a6ef-e3df-0f13c28efe45",
+								"title": "导航3"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}
